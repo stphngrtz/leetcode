@@ -1,10 +1,11 @@
 package leetcode.common;
 
-import java.util.Objects;
-
 public class ListNode {
     public int val;
     public ListNode next;
+
+    public ListNode() {
+    }
 
     public ListNode(int val) {
         this.val = val;
@@ -16,22 +17,20 @@ public class ListNode {
         this.next = next;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ListNode listNode = (ListNode) o;
-
-        if (val != listNode.val) return false;
-        return Objects.equals(next, listNode.next);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = val;
-        result = 31 * result + (next != null ? next.hashCode() : 0);
-        return result;
+    /**
+     * @see <a href="https://github.com/interviewcoder/leetcode/blob/master/src/com/leetcode/ListNode.java">LeetCode ListNode</a>
+     */
+    public static boolean isSameList(ListNode head1, ListNode head2) {
+        if (head1 == null && head2 == null) {
+            return true;
+        }
+        if (head1 == null) {
+            return false;
+        }
+        if (head2 == null) {
+            return false;
+        }
+        return (head1.val == head2.val) && isSameList(head1.next, head2.next);
     }
 
     @Override
