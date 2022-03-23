@@ -5,7 +5,7 @@ import leetcode.common.TreeNode;
 /**
  * Difficulty: Easy
  *
- * @see <a href="https://leetcode.com/problems/binary-tree-inorder-traversal/">LeetCode: Binary Tree Inorder Traversal</a>
+ * @see <a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/">LeetCode: Binary Tree Maximum Depth</a>
  */
 public class BinaryTreeMaximumDepth {
 
